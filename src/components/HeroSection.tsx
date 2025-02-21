@@ -1,32 +1,16 @@
 
-import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7;
-    }
-  }, []);
-
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source
-          src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-luxury-hotel-pool-4099-large.mp4"
-          type="video/mp4"
-        />
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2070&auto=format&fit=crop')`
+        }}
+      />
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40" />
@@ -34,8 +18,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative h-full flex items-center justify-center text-center text-white">
         <div className="container mx-auto px-4">
-          <span className="block text-sm md:text-base uppercase tracking
--[0.2em] text-primary animate-fade-down">
+          <span className="block text-sm md:text-base uppercase tracking-[0.2em] text-primary animate-fade-down">
             Welcome to
           </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl mt-4 mb-6 animate-fade-up">
