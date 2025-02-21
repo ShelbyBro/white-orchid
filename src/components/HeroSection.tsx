@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -28,23 +29,23 @@ const HeroSection = () => {
       </video>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <div className="relative h-full flex items-center justify-center text-center text-white">
         <div className="container mx-auto px-4">
-          <span className="block text-sm md:text-base uppercase tracking-[0.2em] animate-fade-down">
+          <span className="block text-sm md:text-base uppercase tracking
+-[0.2em] text-primary animate-fade-down">
             Welcome to
           </span>
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl mt-4 mb-6 animate-fade-up">
             White Orchid
           </h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-up">
-            Experience unparalleled luxury at Cox's Bazar's premier beachfront
-            resort
+            Experience unparalleled luxury at Cox's Bazar's premier 5-star beachfront resort
           </p>
-          <button className="bg-primary hover:bg-primary-light text-white px-8 py-3 rounded text-lg transition-all duration-300 transform hover:scale-105 animate-fade-up">
-            Book Your Stay
+          <button className="bg-primary hover:bg-primary-light text-white px-8 py-3 rounded text-lg transition-all duration-300 transform hover:scale-105 animate-fade-up flex items-center gap-2 mx-auto">
+            Book Your Stay <ArrowRight size={20} />
           </button>
         </div>
       </div>
