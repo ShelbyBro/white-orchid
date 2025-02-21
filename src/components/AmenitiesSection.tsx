@@ -1,15 +1,15 @@
 
-import { Pool, Utensils, Clock, Dumbbell, Wifi, Coffee, MapPin, Spa } from "lucide-react";
+import { Bath, UtensilsCrossed, Clock, Dumbbell, Wifi, Coffee, MapPin, Hotel } from "lucide-react";
 
 const AmenitiesSection = () => {
   const amenities = [
     {
-      icon: <Pool className="w-8 h-8" />,
+      icon: <Bath className="w-8 h-8" />,
       title: "Infinity Pool",
       description: "Stunning infinity pool overlooking the Bay of Bengal",
     },
     {
-      icon: <Utensils className="w-8 h-8" />,
+      icon: <UtensilsCrossed className="w-8 h-8" />,
       title: "Fine Dining",
       description: "24/7 restaurant serving international cuisine",
     },
@@ -39,7 +39,7 @@ const AmenitiesSection = () => {
       description: "Direct access to Cox's Bazar beach",
     },
     {
-      icon: <Spa className="w-8 h-8" />,
+      icon: <Hotel className="w-8 h-8" />,
       title: "Luxury Spa",
       description: "Traditional and modern spa treatments",
     },
